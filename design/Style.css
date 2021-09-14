@@ -1,0 +1,417 @@
+body {
+    margin : 0px;
+    font-family: sans-serif;
+    background-color: #F4F7F6; 
+    /* background:transparent; */
+}
+
+header {
+    text-align: center;
+    background-color: #1d1d1d;
+    text-decoration-color: red;
+    width : 100%;
+    margin : 0px;
+    margin-bottom: 0px;
+}
+
+header figure {
+    margin-bottom: 0px;
+}
+
+section {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+h1 {
+    color : #ffffff;
+    font-size: 2.5em;  /* ceci est un commentaire */
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    opacity : 1.0;
+    margin-top : 0px;
+    padding-top: 30px;
+}
+h2 {
+    color : white;
+    font-size: 1.5em;  /* ceci est un commentaire */
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    width : 90%;
+    margin: auto;
+}
+
+h3::before {
+    content:  "«";
+    color : grey;
+    /* width:90%; */
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 1.5em;
+    /* clear: both; */
+    text-align: center;
+}
+
+h3::after {
+    content:  "»";
+    color : grey;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav li {
+    color : black;
+    list-style-type: none;
+    display: inline;
+    margin: 10px;
+}
+
+nav a {
+    color : black;
+}
+
+ul {
+    padding: 5px;
+    margin-top: px;
+    /* display: inline; */
+}
+
+nav {
+    color : black;
+    background-color: white;
+    box-shadow: 0px 3px 1px -1px rgba(0,0,0,0.5);
+    text-align: center;
+    font-size: 1.1em;
+    clear: both;
+    margin-top: 0px;
+	padding : 15px;
+}
+
+/* Mettre la police en gras au survol d'un élément du menu : */
+nav li:hover {
+    transition : 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* font-size: 1.2em; */
+    text-shadow: 2px 2px 2px grey;
+    display: inline;
+}
+
+p {
+    margin-bottom: 6; 
+}
+/* Pour  faire un retrait de 1ère ligne */
+/* dans les introductions des séances : */
+p + p {
+    text-indent: 1.5em;
+    margin-top: 0;
+}
+
+footer {
+    background-color: #1d1d1d;
+    color : white;
+    text-align: center;
+	 padding : 15px;
+}
+
+iframe {
+    justify-content : center;
+    width : 300px; 
+	display : block;
+	margin : auto;
+	border-radius : 5px;
+	box-shadow : 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* ratio 16/9 */
+    height: 0; overflow: hidden;
+    clear: both;
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+/* ID */
+#contact {
+	width : 80%;
+    margin : auto;
+    display: block;
+    border : 2px black solid;
+    border-radius: 15px;
+    padding : 30px;
+    margin-bottom : 50px;
+    box-shadow: 5px 5px 5px grey; 
+    background-image: radial-gradient(circle at 61.19% 8.26%, #ffffff 0, #becae5 50%, #5e7bad 100%);
+}
+
+#logo {
+    vertical-align: middle;
+    margin-top: 35px;
+    width : 50px;
+    padding-bottom: 30px;
+    /* float: left; */
+}
+
+#projets, #pictos {
+	display : flex;
+	flex-wrap : wrap;
+	justify-content : center;
+}
+
+#picture-project img {
+	width: 90%;
+}
+ 
+/* CLASSES */
+.separator {
+	width : 40px;
+	height : 1px;
+    margin : 15px auto;
+	display : block;
+	background-color : #999999;
+	}
+
+.MM img{
+    width:40%;
+    justify-content: center;
+}   
+
+.MM {
+    justify-content: center;
+}  
+.contener, .pictos {
+	width : 80%;
+    margin : auto;
+}
+
+.picto {
+    width : 200px;
+    height : 166px;
+	margin : 10px;
+	display : inline-block;
+	background : white;
+    padding-bottom : 15px;
+    border: 0px black solid;
+	border-radius : 10px;
+    overflow : hidden;
+    box-shadow:  3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.picto:hover{
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	border: 4px solid;
+    border-color: black; /* rgb(232,232,234);/*rgba(230, 230, 230,0.3);/*#7CD7F0;*/
+	transition : 0.3s;
+    }
+
+.picto img {
+    min-width: 200px;
+    height: 166px;
+}
+.projeta, .projetb, .projetc, .projetd, .projete, .projetf, .projetg, .projeth, .projeti {
+	width : 400px;
+	margin : 30px;
+	display : inline-block;
+	background : white;
+    padding-bottom : 15px;
+    border: 0 black solid;
+	border-radius : 10px;
+    overflow : hidden;
+    box-shadow:  3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.projeta ul,.projetb ul,.projetc ul,.projetd ul,.projete ul,.projetf ul,.projetg ul,.projeth ul,.projeti ul {
+	list-style-type : disc;
+	text-align : left;
+	padding-left : 25px;
+    color : grey;
+    margin-left: 10px;
+}
+
+table p.numero {
+    background-color: lightgrey;
+    box-sizing: border-box;
+    border-radius: 50%;
+    display:inline-block;
+    padding-top:4px;
+    color:white;
+    font-weight: bold;
+    width:25px;
+    height:25px
+}
+
+.projeta:hover{
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	border: 6px solid;
+    border-color: rgb(232,232,234);/*rgba(230, 230, 230,0.3);/*#7CD7F0;*/
+	transition : 0.3s;
+    }
+ 
+.projetb:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border: 6px solid;
+    border-color:rgb(190,220,248);
+    transition : 0.3s;
+    }
+ 
+.projetc:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border: 6px solid;
+    border-color:rgb(190,220,248);
+    transition : 0.3s;
+    }
+
+.projetd:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border: 6px solid;
+    border-color:rgb(201,248,212);
+    transition : 0.3s;
+    }
+
+.projete:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border: 6px solid;
+    border-color:rgb(201,248,212);
+    transition : 0.3s;
+    }
+
+.projetf:hover{
+    box-shadow: 0 14px 28px rgba(71, 52, 52, 0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border: 6px solid;
+    border-color:rgb(201,248,212);
+    transition : 0.3s;
+    }
+
+.projetg:hover{
+    box-shadow: 0 14px 28px rgba(71, 52, 52, 0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border: 6px solid;
+    border-color:rgb(251,225,184);
+    transition : 0.3s;
+    }
+
+.projeth:hover{
+    box-shadow: 0 14px 28px rgba(71, 52, 52, 0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border: 6px solid;
+    border-color:rgb(251,225,184);
+    transition : 0.3s;
+    }
+
+.projeti:hover{
+    box-shadow: 0 14px 28px rgba(71, 52, 52, 0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border: 6px solid;
+    border-color:rgb(251,225,184);
+    transition : 0.3s;
+    }
+
+.projeta img, .projetb img, .projetc img, .projetd img, .projete img, .projetf img, .projetg img, .projeth img, .projeti img  {
+	min-width : 400px;
+	height : 266px;
+}
+
+
+.intro, .introa {
+	font-size: 1.2em; 
+    text-align : justify;
+    line-height: 1.5em;
+    /* word-spacing: 0.3em; */
+	width : 80%;
+	margin : auto;
+}
+
+.bienvenue {
+    font-size: 1.2em; 
+	text-align : justify;
+    width : 80%;
+    /* margin-left : 20%; */
+    margin-top : 100px;
+    margin : auto;
+}
+
+.picture {
+	width : 400px;
+	height : 266px;
+	overflow : hidden;
+    margin-bottom : 15px;
+    
+}
+
+/* RESPONSIVE */
+.picture-project img, .picture-project iframe {
+    width: 80%;
+}
+
+.picture-project intro {
+    width: 80%;
+    /* padding : 15px; */
+}
+
+.picture-project p {
+    width: 100%;
+    padding : 0% 15%;
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+.picture-project {
+    margin-bottom: -20%;
+}
+
+.titre {
+    text-transform : uppercase;
+    font-weight: bold;
+	text-align : center;
+}
+
+.video {
+    width : 90%;
+	justify-content : center;
+	display : block;
+	margin : auto;
+	border-radius : 5px;
+	box-shadow : 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+/* POLICES */
+@font-face {
+    font-family: 'MINECRAFTPE';
+    src : url('../src/MINECRAFT PE.ttf') format('truetype')
+}
+
+/* MEDIA QUERIES */
+@media all and (max-width : 1000px){
+    .projeta,.projetb, .projetc, .projetd, .projete, .projetf, .projetg, .projeth, .projeti  { width: 100%; margin: 15px auto; }
+    .projeta img { width: 100%; min-width: auto; height: auto; }
+    .projeta .picture { width: 100%; height: auto; }
+    .projetb img { width: 100%; min-width: auto; height: auto; }
+    .projetb .picture { width: 100%; height: auto; }
+    .projetc img { width: 100%; min-width: auto; height: auto; }
+    .projetc .picture { width: 100%; height: auto; }
+    .projetd img { width: 100%; min-width: auto; height: auto; }
+    .projetd .picture { width: 100%; height: auto; }
+    .projete img { width: 100%; min-width: auto; height: auto; }
+    .projete .picture { width: 100%; height: auto; }
+    .projetf img { width: 100%; min-width: auto; height: auto; }
+    .projetf .picture { width: 100%; height: auto; }
+    .projetg img { width: 100%; min-width: auto; height: auto; }
+    .projetg .picture { width: 100%; height: auto; }
+    .projeth img { width: 100%; min-width: auto; height: auto; }
+    .projeth .picture { width: 100%; height: auto; }
+    .projeti img { width: 100%; min-width: auto; height: auto; }
+    .projeti .picture { width: 100%; height: auto; }
+    header h2 {width : 90%;}
+    header h2 {width : 90%;}
+    h3 {width : 95%; font-size : 1.2em;}
+    .contener {width : 85%; margin : auto;}
+    .intro {width : 90%; margin: 10px auto;}
+    .introa {width : 90%; margin: 10px auto;}
+    .bienvenue {width : 90%}
+    .picture-project h3 {width: 100%; padding : 0% 15%; font-size: 1.2em; text-align: center; }
+}

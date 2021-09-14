@@ -1,0 +1,212 @@
+body {
+    margin : 0px;
+    font-family: sans-serif;
+    background-color: #F4F7F6; 
+    /* background:transparent; */
+}
+
+p{
+    background-color: #0CC;
+  }
+
+  div{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border: 1px solid black;
+    box-sizing: border-box;
+  }
+  
+  .relatif{
+    position: relative;
+  }
+
+  .haut{
+    top: 60px;/*Elément décalé de 50px vers le bas p/r à une origine*/
+  }
+
+  .gauche{
+    left: 150px;/*Element décalé de 150px vers la droite p/r à une origine*/
+  }
+  
+  .droite{
+    right: 30px;/*Element décalé de 30px vers la gauchr p/r à une origine*/
+  }
+  
+  .bleu{
+    background-color: #0AF;
+  }
+  .vert{
+    background-color: #0FA;
+  }
+
+header {
+    text-align: center;
+    background-color: #1d1d1d;
+    text-decoration-color: red;
+    width : 100%;
+    margin : 0px;
+    margin-bottom: 0px;
+}
+
+header figure {
+    margin-bottom: 0px;
+}
+
+section {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+h1 {
+    color : #ffffff;
+    font-size: 2.5em;  /* ceci est un commentaire */
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    opacity : 1.0;
+    margin-top : 0px;
+    padding-top: 30px;
+}
+h2 {
+    color : white;
+    font-size: 1.5em;  /* ceci est un commentaire */
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    width : 90%;
+    margin: auto;
+}
+
+h3::before {
+    content:  "«";
+    color : grey;
+    /* width:90%; */
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 1.5em;
+    /* clear: both; */
+    text-align: center;
+}
+
+h3::after {
+    content:  "»";
+    color : grey;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav li {
+    color : black;
+    list-style-type: none;
+    display: inline;
+    margin: 10px;
+}
+
+nav a {
+    color : black;
+}
+
+ul {
+    padding: 5px;
+    margin-top: px;
+    /* display: inline; */
+}
+
+nav {
+    color : black;
+    background-color: white;
+    box-shadow: 0px 3px 1px -1px rgba(0,0,0,0.5);
+    text-align: center;
+    font-size: 1.1em;
+    clear: both;
+    margin-top: 0px;
+	padding : 15px;
+}
+
+/* Mettre la police en gras au survol d'un élément du menu : */
+nav li:hover {
+    transition : 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* font-size: 1.2em; */
+    text-shadow: 2px 2px 2px grey;
+    display: inline;
+}
+
+p {
+    margin-bottom: 6; 
+}
+/* Pour  faire un retrait de 1ère ligne */
+/* dans les introductions des séances : */
+p + p {
+    text-indent: 1.5em;
+    margin-top: 0;
+}
+
+/* ID */
+
+#logo {
+    vertical-align: middle;
+    margin-top: 35px;
+    width : 50px;
+    padding-bottom: 30px;
+    /* float: left; */
+}
+ 
+/* CLASSES */
+.separator {
+	weight : 40px;
+	height : 1px;
+    margin : 15px auto;
+	display : block;
+	background-color : #999999;
+	}
+	
+.contener {
+	width : 80%;
+    margin : auto;
+}
+
+
+.titre {
+    text-transform : uppercase;
+    font-weight: bold;
+	text-align : center;
+}
+
+
+/* POLICES */
+@font-face {
+    font-family: 'MINECRAFTPE';
+    src : url('../src/MINECRAFT PE.ttf') format('truetype')
+}
+
+/* MEDIA QUERIES */
+@media all and (max-width : 1000px){
+    .projeta,.projetb, .projetc, .projetd, .projete, .projetf, .projetg img { width: 100%; margin: 15px auto; }
+    .projeta img { width: 100%; min-width: auto; height: auto; }
+    .projeta .picture { width: 100%; height: auto; }
+    .projetb img { width: 100%; min-width: auto; height: auto; }
+    .projetb .picture { width: 100%; height: auto; }
+    .projetc img { width: 100%; min-width: auto; height: auto; }
+    .projetc .picture { width: 100%; height: auto; }
+    .projetd img { width: 100%; min-width: auto; height: auto; }
+    .projetd .picture { width: 100%; height: auto; }
+    .projete img { width: 100%; min-width: auto; height: auto; }
+    .projete .picture { width: 100%; height: auto; }
+    .projetf img { width: 100%; min-width: auto; height: auto; }
+    .projetf .picture { width: 100%; height: auto; }
+    .projetg img { width: 100%; min-width: auto; height: auto; }
+    .projetg .picture { width: 100%; height: auto; }
+    header h2 {width : 90%;}
+    header h2 {width : 90%;}
+    h3 {width : 95%; font-size : 1.2em;}
+    .contener {width : 85%; margin : auto;}
+    .intro {width : 80%; margin: 10px auto;}
+    .introa {width : 90%; margin: 10px auto;}
+    .bienvenue {width : 90%}
+    .picture-project h3 {width: 100%; padding : 0% 15%; font-size: 1.2em; text-align: center; }
+}

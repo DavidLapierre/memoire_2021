@@ -1,0 +1,261 @@
+body {
+    margin : 0px;
+    font-family: sans-serif;
+    background-color: #F4F7F6; 
+    /* background:transparent; */
+}
+
+header {
+    text-align: center;
+    background-color: #1d1d1d;
+    text-decoration-color: red;
+    width : 100%;
+    margin : 0px;
+    margin-bottom: 0px;
+}
+
+header figure {
+    margin-bottom: 0px;
+}
+
+section {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+h1 {
+    color : #ffffff;
+    font-size: 2.5em;  /* ceci est un commentaire */
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    opacity : 1.0;
+    margin-top : 0px;
+    padding-top: 30px;
+}
+h2 {
+    color : white;
+    font-size: 1.5em;  /* ceci est un commentaire */
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    width : 90%;
+    margin: auto;
+}
+
+h3::before {
+    content:  "«";
+    color : grey;
+    /* width:90%; */
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 1.5em;
+    /* clear: both; */
+    text-align: center;
+}
+
+h3::after {
+    content:  "»";
+    color : grey;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav li {
+    color : black;
+    list-style-type: none;
+    display: inline;
+    margin: 10px;
+}
+
+nav a {
+    color : black;
+}
+
+ul {
+    padding: 5px;
+    margin-top: px;
+    /* display: inline; */
+}
+
+nav {
+    color : black;
+    background-color: white;
+    box-shadow: 0px 3px 1px -1px rgba(0,0,0,0.5);
+    text-align: center;
+    font-size: 1.1em;
+    clear: both;
+    margin-top: 0px;
+	padding : 15px;
+}
+
+/* Mettre la police en gras au survol d'un élément du menu : */
+nav li:hover {
+    transition : 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* font-size: 1.2em; */
+    text-shadow: 2px 2px 2px grey;
+    display: inline;
+}
+
+p {
+    margin-bottom: 6; 
+}
+/* Pour  faire un retrait de 1ère ligne */
+/* dans les introductions des séances : */
+p + p {
+    text-indent: 1.5em;
+    margin-top: 0;
+}
+
+footer {
+    background-color: #1d1d1d;
+    color : white;
+    text-align: center;
+	 padding : 15px;
+}
+
+#MMs {
+	display : flex;
+	flex-wrap : wrap;
+	justify-content : center;
+}
+
+.MM  {
+    /* width : 80%;400px; */
+	margin : 30px;
+	display : inline-block;
+	background : white;
+    padding-bottom : 5px;
+    border: 0px black solid;
+	border-radius : 10px;
+    overflow : hidden;
+    box-shadow:  3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.MM ul {
+    text-align: center;
+    font-size: 2em;
+}
+
+span .titre {
+    text-align: center;
+    justify-content: center;
+}
+/* .MM img {
+    max-width: 80%;
+    /* height: 166px; */
+} */
+
+.picture {
+    width:400px;
+    height : auto;
+}
+
+iframe {
+    justify-content : center;
+    width : 300px; 
+	display : block;
+	margin : auto;
+	border-radius : 5px;
+	box-shadow : 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* ratio 16/9 */
+    height: 0; overflow: hidden;
+    clear: both;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    /* position: relative; */
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 70%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* ID */
+#contact {
+	width : 80%;
+    margin : auto;
+    display: block;
+    border : 2px black solid;
+    border-radius: 15px;
+    padding : 30px;
+    margin-bottom : 50px;
+    box-shadow: 5px 5px 5px grey; 
+    background-image: radial-gradient(circle at 61.19% 8.26%, #ffffff 0, #becae5 50%, #5e7bad 100%);
+}
+
+#logo {
+    vertical-align: middle;
+    margin-top: 35px;
+    width : 50px;
+    padding-bottom: 30px;
+    /* float: left; */
+}
+
+#picture-project img {
+	width: 90%;
+}
+ 
+/* CLASSES */
+.separator {
+	width : 40px;
+	height : 1px;
+    margin : 15px auto;
+	display : block;
+	background-color : #999999;
+	}
+
+.intro, .introa {
+	font-size: 1.2em; 
+    text-align : justify;
+    line-height: 1.5em;
+    /* word-spacing: 0.3em; */
+	width : 80%;
+	margin : auto;
+}
+
+.video {
+    width : 90%;
+	justify-content : center;
+	display : block;
+	margin : auto;
+	border-radius : 5px;
+	box-shadow : 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+/* POLICES */
+@font-face {
+    font-family: 'MINECRAFTPE';
+    src : url('../src/MINECRAFT PE.ttf') format('truetype')
+}
+
+/* MEDIA QUERIES */
+@media all and (max-width : 1000px){
+    .projeta,.projetb, .projetc, .projetd, .projete, .projetf, .projetg, .projeth, .projeti  { width: 100%; margin: 15px auto; }
+    .projeta img { width: 100%; min-width: auto; height: auto; }
+    .projeta .picture { width: 100%; height: auto; }
+    header h2 {width : 90%;}
+    header h2 {width : 90%;}
+    h3 {width : 95%; font-size : 1.2em;}
+    .contener {width : 85%; margin : auto;}
+    .intro {width : 80%; margin: 10px auto;}
+    .introa {width : 90%; margin: 10px auto;}
+    .bienvenue {width : 90%}
+    .picture-project h3 {width: 100%; padding : 0% 15%; font-size: 1.2em; text-align: center; }
+}
