@@ -77,25 +77,11 @@ h3::after {
 }
 
 /* BARRE DE NAVIGATION */
-a {
-    text-decoration: none;
-}
-
 nav li {
     color : black;
     list-style-type: none;
     display: inline;
     margin: 10px;
-}
-
-nav a {
-    color : black;
-}
-
-ul {
-    padding: 5px;
-    margin-top: px;
-    /* display: inline; */
 }
 
 nav {
@@ -109,15 +95,67 @@ nav {
 	padding : 15px;
 }
 
+nav a {
+    color : black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    position:relative;
+}
+
+nav ul {
+    padding: 5px;
+    margin-top: px;
+}
+
+/* ANIMATION menu : trait bleu */
+nav ul li a::before {
+    content: '';
+    width:0%;
+    height:5px;
+    background-color: lightskyblue;
+    position: absolute;
+    top:110%;
+    transition:all 0.4s ease-out;
+}
+
+nav ul li a:hover::before {
+    content: '';
+    width:50%;
+    transform: translateX(100%);
+    box-shadow: 2px 2px 2px grey;
+}
+
+
+/* ANIMATION menu : trait violet */
+nav ul li a::after {
+    content: '';
+    width:0%;
+    height:5px;
+    background-color:#f0f;
+    position: absolute;
+    top:110%;
+    right:0;
+    transition:all 0.4s ease-out;
+}
+
+nav ul li a:hover::after {
+    content: '';
+    width:50%;
+    transform: translateX(-100%);
+    box-shadow: 2px 2px 2px grey;
+}
+
 /* Mettre la police en gras au survol d'un élément du menu : */
 nav li:hover {
-    transition : 0.3s;
+    /* transition : 0.3s;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: uppercase; */
     /* font-size: 1.2em; */
     text-shadow: 2px 2px 2px grey;
     display: inline;
 }
+
 
 /* INTRODUCTION */
 .contener {
