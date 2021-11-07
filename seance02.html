@@ -15,24 +15,30 @@
         <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto:wght@100&display=swap" rel="stylesheet"> 
         <link rel="icon" type="image/png" href="pictures/favicon.png">
         <meta name="viewport" content="width=device-width" /> <!-- RESPONSIVE -->
-       
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     </head>
     <!------------- CE QUI S'AFFICHE SUR LA PAGE ------------->
     <body>
-        
+      <script>
+        AOS.init({
+            duration: 1200,
+          })
+        </script>
         <!------------- EN-TÊTE DE PAGE ------------->
         <header>
             
-            <h1> Séance 2 </h1> <!-- PRENOM et NOM -->
+            <h1 data-aos="fade-down" > Séance 2 </h1> <!-- PRENOM et NOM -->
 				<span id="separator"> </span>
             <hr>
-            <h2> (ou comment apprendre n'importe quelle liste...) </h2> <!-- STATUT -->
-            <figure> <!-- LOGO -->
-                <img src="pictures/Logo2.JPG" alt="logo" title="Les 2 ingrédients d'une bonne mémorisation : Imagination et Association." id = "logo" style="width:300px"/>
-                <!-- <figcaption>
-                    Logo
-                </figcaption> -->
-            </figure>
+            <h2 data-aos="fade-down" data-aos-delay="500" data-aos-easing="ease-out"> (ou comment apprendre n'importe quelle liste...) </h2> <!-- STATUT -->
+            <div class="illustration_S02">
+                <img src="pictures/liste.png" class="liste liste1" >
+                <img src="pictures/liste.png" class="liste liste2">
+                <img src="pictures/liste.png" class="liste liste3">
+                <img src="pictures/liste.png" class="liste liste4">
+            </div>
+            
             
         </header>
 
@@ -41,7 +47,7 @@
             <ul class="m-0">
                 <li> <a href = "index.html" title="Vous renvoie sur la page d'accueil..."> Accueil </a> </li>
                 <li> <a href = "seance01.html" title="Toujours la séance 1."> Séance 1 </a> </li>
-                <li> <a href = "seance02.html" title="À venir."> Séance 3 </a> </li>
+                <li> <a href = "seance03.html" title="À venir."> Séance 3 </a> </li>
             </ul>
          </nav>
 
@@ -65,7 +71,7 @@
                      
                          <h3 class="display-6 fw-bold py-4"> UN EXEMPLE EN HISTOIRE-GÉOGRAPHIE </h3>
                          <p class="mt-4">Rappelez-vous qu'il faut <span class="badge bg-warning fs-6">rendre l’information « mémorable » </span> grâce 
-                          à notre imagination.  Par exemple, les États-Unis me font penser à Statue de la Liberté, Chine à un Dragon, le Japon à un Samouraï,
+                          a notre imagination.  Par exemple, les États-Unis me font penser à Statue de la Liberté, Chine à un Dragon, le Japon à un Samouraï,
                           la Suisse à un "petit suisse", etc...À vous de trouver une image forte qui vous fera penser immédiatement au pays à retenir.
                            Ensuite, puisqu'il faut les retenir dans l'ordre, il faudra IMPÉRATIVEMENT <span class="badge bg-warning fs-6">faire des associations</span>,
                             des liens entre vos images : il faut qu'elles interagissent l'une avec l'autre !
@@ -130,7 +136,7 @@
     <figcaption class="text-center text-muted fst-italic">Écoutez une proposition de solution :</figcaption>
     <audio class="w-100 mx-auto px-5"
         controls
-        src="media/liste_atomes2.mp3">
+        src="media/liste_atomes.mp3">
             Votre navigateur internet ne gère pas la balise
             <code>audio</code> mp3.
     </audio>
@@ -164,7 +170,7 @@ vous permettra de vous rappeler que ce sont des pluriels en "aux" : le mot trava
     <figcaption class="text-center text-muted fst-italic">Écoutez une proposition de solution :</figcaption>
     <audio class="w-100 mx-auto px-5"
         controls
-        src="media/liste_pluriel_aux2.mp3">
+        src="media/liste_pluriel_aux.mp3">
             Votre navigateur internet ne gère pas la balise
             <code>audio</code> mp3.
     </audio>
@@ -177,7 +183,7 @@ vous permettra de vous rappeler que ce sont des pluriels en "aux" : le mot trava
             <div class="row lead bg-white m-md-5 mx-2 " style="border:2px solid black;
             box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);">
               <div class="col-md-3 col-sm-6 my-auto">
-                <img class="img-fluid" src="pictures/moi.jpeg" style="height: 205px;">
+                <img class="img-fluid"  data-aos="flip-down" src="pictures/moi.jpeg" style="height: 205px;">
               </div>
               <div class="col-md-9 col-sm-6 my-auto">
                 <p class=" mt-4 text-justify" style="font-family: 'Cabin Sketch', cursive; font-size:20px; text-align : justify; color:rgb(21, 131, 233);"> Si vous avez des questions ou des commentaires, n'hésitez pas à m'envoyer un 
