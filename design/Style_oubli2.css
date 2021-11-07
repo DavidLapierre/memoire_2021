@@ -15,60 +15,100 @@ header {
 }
 
 .illustration {
-    margin: 15px auto 0px auto;
-    background-image: url(../pictures/Logo_oubli.png);
+    margin: 15px auto;
+    background-image: url(../pictures/Logo4.JPG);
     background-size:cover;
     width:490px;
     height:300px;
     position: relative;
 }
 
-.illustration ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
+
+/* ANIMATION REBOND  */
+header .container-mouvement {
+    margin: 15px auto;
     position: relative;
-    top : 30%;
-    left: 42%;
+    background-image: url("../pictures/Logo4.JPG");
+    background-size: 300px;
+    width:370px;
+    height: 220px;
+    top:00%;
+    left:0;
+    /* width:490px;
+    height:300px; */
 }
 
-/* ANIMATION DU MOT : OUBLI ---- DÉBUT ---- */
-.illustration ul li {
-    list-style: none;
-    color:white;
-    font-size: 35px;
-    font-weight: bold;
-    letter-spacing :10px;
-    transition : 2s;
+.chemin-svg {
+    position: absolute;
+    background-image: url("../pictures/Logo4.JPG");
+    background-size: 300px;
+    width:370px;
+    height: 220px;
+    top:00%;
+    left:0;
 }
 
-.illustration:hover ul li {
-    transform: rotate(45deg) translateY(-200px);
-    opacity: 0;
-    filter:blur(20px);
+.objet {
+    offset-path: path("M 0,100 C0,40 50,40 50,100 C50,40 100,40 100,100 C100,40 150,40 150,100 C150,40 200,40 200,100 C200,40 250,50 250,50"); /* PARABOLE */
+    transform-origin: top center;
 }
 
-.illustration li:nth-child(1) {
-    transition-delay: 0;
+.objet {
+    position:absolute;
+    transform: scale(0.5);
+    top:-10px;
+    left:100px;
+    width:40px;
+    height: auto;
+    offset-rotate: 0deg;
 }
 
-.illustration li:nth-child(2) {
-    transition-delay: 0.4s;
+.container-mouvement:hover .objet {
+    animation : rebond 3s  forwards;
 }
 
-.illustration li:nth-child(3) {
-    transition-delay: 0.8s;
+@keyframes rebond {
+    0% {offset-distance: 0%;}
+    10% {offset-distance: 10%; animation-timing-function:ease-out; }
+    20% {offset-distance: 20%; animation-timing-function:ease-in; offset-rotate:0deg;}
+    30% {offset-distance: 30%; animation-timing-function:ease-out; offset-rotate:0deg;}
+    40% {offset-distance: 40%; animation-timing-function:ease-in; offset-rotate:0deg;}
+    50% {offset-distance: 50%; animation-timing-function:ease-out; offset-rotate:0deg;}
+    60% {offset-distance: 60%; animation-timing-function:ease-in; offset-rotate:0deg;}
+    70% {offset-distance: 70%; animation-timing-function:ease-out; offset-rotate:0deg;}
+    80% {offset-distance: 80%; animation-timing-function:ease-in; offset-rotate:0deg;}
+    100% {offset-distance: 100%; offset-rotate:0deg;}
 }
 
-.illustration li:nth-child(4) {
-    transition-delay: 1.2s;
+.idee {
+    position: absolute;
+    width:15px;
+    height:auto;
+    /* background-color: chartreuse; */
+    /* border-radius: 50%; */
+    top:110px;
+    left:40px;
+    opacity:0;
+    /* animation : grossissement 3s  forwards; */
 }
 
-.illustration li:nth-child(5) {
-    transition-delay: 1.4s;
+.container-mouvement:hover .idee {
+    animation : grossissement 3s  forwards;
 }
 
-/* ANIMATION DU MOT : OUBLI ---- FIN ---- */
+@keyframes grossissement {
+    0% {offset-distance: 0%;}
+    10% {offset-distance: 10%;  }
+    20% {offset-distance: 20%; transform: scale(2.0); opacity:1;}
+    30% {offset-distance: 30%; }
+    40% {offset-distance: 40%; transform: scale(3.0); opacity:1;}
+    50% {offset-distance: 50%; }
+    60% {offset-distance: 60%; transform: scale(4.0); opacity:1;}
+    70% {offset-distance: 70%; }
+    80% {offset-distance: 80%; transform: scale(5.0); opacity:1;}
+    100% {offset-distance: 100%; transform: scale(5.5); opacity:1;}
+}
+
 
 
 section {
@@ -202,55 +242,6 @@ p {
 p + p {
     text-indent: 1.5em;
     margin-top: 0;
-}
-
-/* ANIMATION FLASHCARDS */
-.carte {
-    cursor: pointer;
-    width:340px;
-    height:400px;
-    position:relative;
-    display:inline-block;  
-}
-
-h4 {
-    font-size: 2rem;
-    text-transform: uppercase;
-}
-
-.devant, .derriere {
-    width:100%;
-    height: 100%;
-    /* Indique si la face cachée doit être visible ou non */
-    backface-visibility: hidden;
-    position: absolute;
-    transition : transform 0.6s linear;
-}
-
-.devant h2, .derriere h2 {
-
-}
-/* .derriere img { */
-    /* height: 100%;
-    width:100%; */
-/* } */
-
-.derriere {
-    transform: perspective(600px) rotateY(180deg);
-    background-color: white;
-}
-
-.devant {
-    transform: perspective(600px) rotateY(0deg);
-    background-color: white;
-}
-
-.carte:hover .devant{
-    transform: perspective(600px) rotateY(-180deg);
-}
-
-.carte:hover .derriere{
-    transform: perspective(600px) rotateY(0deg);
 }
 
 footer {
