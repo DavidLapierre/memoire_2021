@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+    <!------------- MÉTA-INFORMATIONS ------------->
+    <head>
+        <meta charset = "utf-8">
+        <title> David LAPIERRE | Chercheur de solutions neuroergonomiques </title>
+        <!-- <link rel="stylesheet" href="design/Style_seance.css"> -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="design/Style_oubli.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto:wght@100&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap" rel="stylesheet"> 
+        <link rel="icon" type="image/png" href="pictures/favicon.png">
+        <meta name="viewport" content="width=device-width" /> <!-- RESPONSIVE -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1/dist/chart.xkcd.min.js"></script>
+    </head>
+    <!------------- CE QUI S'AFFICHE SUR LA PAGE ------------->
+    <body>
+        <script>
+        AOS.init({
+            duration: 1200,
+          })
+        </script>
+        <!------------- EN-TÊTE DE PAGE ------------->
+        <header>
+            
+            <h1 data-aos="fade-down"> Séance 5 </h1> <!-- PRENOM et NOM -->
+				<span id="separator"> </span>
+            <hr>
+            <h2 data-aos="fade-down" data-aos-delay="500" data-aos-easing="ease-out"> (ou pourquoi on oublie et comment ne plus oublier...) </h2> <!-- STATUT -->
+            <div class="illustration">
+                <ul>
+                    <li>O</li>  
+                    <li>U</li>
+                    <li>B</li>
+                    <li>L</li>
+                    <li>I</li>
+                </ul>
+            </div>
+            
+        </header>
+       
+        <!-- ---------- NAVIGATION DE PAGE ---------- -->
+        <nav>
+            <ul class="m-0">
+                <li> <a href = "index.html" title="Vous renvoie sur la page d'accueil..."> Accueil </a> </li>
+                <li> <a href = "seance04.html" title="Vers la séance 4."> Séance 4 </a> </li>
+                <li> <a href = "seance06.html" title="Vers la séance 6."> Séance 6 </a> </li>
+
+            </ul>
+         </nav>
+
+        <!------------- SECTION DE PAGE ------------->
+        <section class="intro lead text-dark">
+            <h3 class="display-6 fw-bold mt-4 mb-3"> INTRODUCTION </h3>
+            <p style="text-align: center"> Ceci est ma <span class="badge bg-primary fs-5"> cinquième  Séance</span></span>.<br/></p>
+            
+				<p> En 1885, Hermann Ebbinghaus se livra à la première étude scientifique
+                    sur la mémoire. En effet, depuis l'Antiquité, les philosophes grecques débattaient
+                    sur la mémoire mais Ebbinghaus fut le premier 
+                    à faire de véritables expériences (qui ont été répliquées). Il voulait
+                    vérifier s'il retenait une information et savoir au bout de combien de temps
+                    il oubliait cette information. Comme il était évident 
+                    que l'on retient mieux une information que l'on peut associer à quelque chose de connu,
+                    le psychologue allemand choisit de mémoriser des milliers de mots dénués de sens !
+                    Cela lui permettait d'avoir une information la plus NEUTRE possible : il ne pouvait
+                    pas jouer sur le sens ni sur ce qu'il connaissait déjà (accessoirement, cela rendait 
+                    l'information beaucoup plus difficile à retenir).
+                  </p>
+                <p> Son acte de masochisme ne s'arrêta pas là ! Il prit soin de mesurer le temps au bout
+                    duquel son souvenir de l'information se dégradait (c'est à dire quand l'information 
+                    est oubliée). Ensuite, pour se rendre compte de la vitesse à laquelle il oubliait 
+                    l'information, il a tracé selon un axe vertical le pourcentage d'informations retenues.
+                    et selon un axe horizontal, la durée après la 1ère exposition à l'information.
+                     Et il a découvert ce que l'on appelle la "Courbe de l'Oubli" :</p>
+                
+                <!-- GRAPHE INTERACTIF -->
+                    <div id="5aa90afe44204baab84e8643ce1d5002" class="chart-container img-fluid mx-auto" >
+                        <svg id="chart_5aa90afe44204baab84e8643ce1d5002"></svg>
+                    </div>
+                    <script>
+                        const svg_5aa90afe44204baab84e8643ce1d5002 = document.querySelector('#chart_5aa90afe44204baab84e8643ce1d5002')
+                        const chart_5aa90afe44204baab84e8643ce1d5002 = new chartXkcd.Line(svg_5aa90afe44204baab84e8643ce1d5002, {"title": "Courbe de l'Oubli", "data": {"datasets": [{"label": "% d'informations retenues", "data": [100.0, 36.787944117144235, 13.53352832366127, 4.978706836786395, 1.8315638888734178, 0.6737946999085467]}], "labels": ["0", "1", "2", "3", "4", "5"]}, "xLabel": "DUR\u00c9E", "yLabel": "Vivacit\u00e9 du souvenir", "options": {"yTickCount": 10, "legendPosition": 2}});
+                    </script>
+                <!-- GRAPHE INTERACTIF -->
+
+                <p> On voit sur cette courbe que l'oubli est très rapide ou pour le dire autrement,
+                    que la dégradation du souvenir est très rapide : en gros, au bout d'une journée
+                    sans revoir l'information, nous oublions déjà 70% de l'information !
+                </p>
+                <p>Ici, j'aimerais revenir sur ce que j'avais appelé "effet Sisyphe" dans la séance 
+                   précédente.  vous avez appris votre cours, vous le connaissez bien et, 
+                   une semaine après, vous vous rendez compte que vous en avez déjà oublié 
+                   une grande partie ! C'est d'autant plus rageant que votre cerveau,
+                    lui, se rappelle bien des efforts que vous avez dû déployer et de la peine subie
+                     pendant l'apprentissage de votre cours !
+                   En ce qui me concerne, j'ai vécu cette situation des centaines de fois ! Cette situation
+                   s'explique bien à l'aide de cette courbe de l'oubli :
+                </p>
+                <div class="ratio ratio-4x3 mb-4">
+                    <figure class="text-center mb-4">
+                        <img class="img-fluid" data-aos="slide-left" src="pictures/Effet Sisyphe.png">
+                    <figcaption class="text-center mb-4 fst-italic">Effet Sisyphe</figcaption>
+                    </figure>
+                    
+                </div>
+                <p class="mt-5">Lorsque vous essayez de revoir votre cours (1ère révision), vous avez déjà presque totalement
+                    oublié ! Donc, vous êtes obligé de refournir quasiment les mêmes efforts que lors de votre
+                    1er apprentissage ! Comme ce héros de la mythologie grecque, condamné à pousser le même rocher
+                    éternellement !
+                </p>
+
+        </section>
+
+       
+
+        <section class="intro lead text-dark">
+            <h3 class="display-6 fw-bold  mb-3"> SE TESTER PLUTÔT QUE D'ÉTUDIER </h3>
+            <p> Depuis les travaux de..., on sait qu'il est beaucoup plus efficace, pour retenir un cours
+                de privilégier le questionnement actif plutôt que "d'étudier" son cours. Je sais, cela
+                peut vous étonner ! Mais avant que vous ne réagissiez, je  vais préciser ce que je veux
+                 dire par là. Par exemple, vous avez lu la 1ère partie de cette page Web. "Étudier" cette 
+                 première partie serait de relire la première partie en se demandant si vous avez bien 
+                compris chaque passage. L’immense majorité des élèves apprennent leur cours en le lisant
+                 et le relisant, ou
+                en fabriquant des petites fiches de révision contenant les points essentiels sans
+                pour autant s’interroger. Il y a plusieurs problèmes lorsqu'un élève fait cela :
+            <ol>
+                <li>Parce que le texte lui paraît familier, il a l'impression (fausse) de l'avoir retenu.</li>
+                <li>Comprendre n'est pas suffisant pour dire que l'on a retenu l'information à long terme.</li>
+            </ol></p>
+            <p>Pourquoi est-il nettement plus efficace de se poser des questions pour mieux retenir, 
+                plutôt que de simplement lire et relire, écouter ou observer ? La réponse tient 
+                essentiellement à deux arguments :</p>
+            <p>
+                <ol>
+                    <li>Tout d’abord, le cerveau est naturellement conçu pour apprendre en se questionnant,
+                        c’est la théorie du cerveau
+                       prédictif et probabiliste. Il part de modèles mentaux acquis en mémoire,
+                        pose des hypothèses, obtient des réponses
+                       et ajuste les erreurs de prédiction. C’est cela apprendre : travailler 
+                       sur ses modèles mentaux et en retenir les
+                       ajustements (corrections).</li>
+                    <li>
+                        Le questionnement permet une plus grande attention, une des clés de la mémorisation,
+                 mais également d’explorer
+                la compréhension en particulier par l’explicitation.
+                    </li>
+                </ol>
+            </p>
+               
+              
+            <p> Le questionnement actif revient à se tester sans regarder le texte (ce que j'appelle la
+                méthode de la feuille blanche). Pour vous faire comprendre ce que cela signifie, je vais vous
+                demander de répondre à quelques questions sur ce que vous avez lu 
+                sous forme de cartes flash (nous reviendrons bientôt sur les cartes flash) et sans regarder
+                 le texte.
+            </p>
+
+            <div class="row mx-auto">
+                <div class="col-md-11">
+                    <div class="carte m-2">
+                        <div class="devant rounded rounded-3 shadow border border-warning border-5">
+                            <h4 class="text-center text-uppercase my-3 fw-bold">Question 1</h4>
+                            <p class="lead mx-2">Comment s'appelle le 1er individu à faire des recherches expérimentales sur la mémoire et l'oubli  ?</p> 
+                        </div>
+                        <div class="derriere rounded rounded-3 shadow border border-warning border-5">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Ebbinghaus2.jpg/440px-Ebbinghaus2.jpg" class="rounded rounded-3 w-75 d-block mx-auto">
+                            <p class="text-center">Hermann Ebbinghaus</p>
+                        </div>
+                    </div>
+        
+                    <div class="carte m-2">
+                        <div class="devant rounded rounded-3 shadow border border-warning border-5">
+                            <h4 class="text-center text-uppercase  my-3 fw-bold">Question 2</h4>
+                            
+                            <p class="lead mx-2">En quelle année a-t-il fait ses expériences ?</p>
+                        </div>
+                        <div class="derriere rounded rounded-3 shadow border border-warning border-5">
+                            <p class="lead d-block text-center my-5">En 1885.</p>
+                            
+                        </div>
+                    </div>
+
+                    <div class="carte m-2">
+                        <div class="devant rounded rounded-3 shadow border border-warning border-5">
+                            <h4 class="text-center text-uppercase  my-3 fw-bold">Question 3</h4>
+                            
+                            <p class="lead mx-2">Quel type d'informations a-t-il chercher à mémoriser et pourquoi ?</p>
+                        </div>
+                        <div class="derriere rounded rounded-3 shadow border border-warning border-5">
+                            <p class="lead m-4"> Des mots :</p>
+                            <ul>
+                                <li>qu'il ne connaissait pas.</li>
+                                <li>qui n'avaient pas de sens.</li>
+                            </ul>
+                            <p class="lead m-4"> Pour que l'information soit <span class="text-decoration-underline fw-bold">
+                                NEUTRE</span>.</p>
+                        </div>
+                    </div>
+        
+                    <div class="carte m-2">
+                        <div class="devant rounded rounded-3 shadow border border-warning border-5">
+                            <h4 class="text-center text-uppercase  my-3 fw-bold">Question 4</h4>
+                            
+                            <p class="lead mx-2">Quelles mesures a-t-il porté sur un graphique ?</p>
+                        </div>
+                        <div class="derriere rounded rounded-3 shadow border border-warning border-5">
+                            <p class="lead d-block text-center my-5">La vivacité du souvenir et la durée.</p>
+                            <img class="img-fluid "src="pictures/gaph_axes.png">
+                        </div>
+                    </div>
+
+                    <div class="carte m-2">
+                        <div class="devant rounded rounded-3 shadow border border-warning border-5">
+                            <h4 class="text-center text-uppercase my-3 fw-bold">Question 5</h4>
+                            <p class="lead mx-2">Redessinez la "Courbe de l'Oubli (avec l'intitulé de l'axe 
+                                horizontal et l'intitulé de l'axe vertical).
+                            </p> 
+                            
+                        </div>
+                        <div class="derriere rounded rounded-3 shadow border border-warning border-5">
+                            <img class="img-fluid "src="pictures/graph_axes_signification.png">
+                        </div>
+                    </div>
+
+                    <div class="carte m-2">
+                        <div class="devant rounded rounded-3 shadow border border-warning border-5">
+                            <h4 class="text-center text-uppercase my-3 fw-bold">Question 6</h4>
+                            <p class="lead mx-2">Que faut-il retenir de la "Courbe de l'Oubli" ?
+                            </p> 
+                        </div>
+                        <div class="derriere rounded rounded-3 shadow border border-warning border-5">
+                            <img class="img-fluid "src="pictures/graph_axes_courbe_signification.png">
+                        </div>
+                    </div>
+
+                   
+        
+                </div>
+            </div>
+
+                <p> Mais en général, le "taux de déterioration" d'un souvenir ralentit à chaque fois que tu t'en rappelles activement. (par rapport à le relire passivement).
+                Cependant, quand tu arrêtes de t'entraîner, il se détériore toujours.).</p>
+                
+                <p>Un unique rappel booste un peu la mémoire... mais à long terme, du fait 
+                    de la déterioration exponentielle de la mémoire, un unique rappel ne change rien.</p>
+        </section>
+        <section class="intro lead text-dark">
+            <h3 class="display-6 fw-bold mt-4 mb-3"> COMMENT ÊTRE <span 
+                class="text-decoration-line-through text-secondary">PARESSEUX</span> EFFICACE ? </h3>
+            <p>Ebbinghaus a découvert aussi quelque chose en continuant ses recherches sur la courbe
+                de l'oubli. Il est vrai que réviser permet de remettre l'information en mémoire 
+                mais on se retrouve toujours avec une dégradation du souvenir et donc un oubli à long
+                terme de l'information que l'on souhaite retenir. </p>
+                <p>Du coup, Il a cherché à savoir s'il y avait un meilleur moment pour réactiver
+                    l'information en mémoire...et ce qu'il a trouvé est absolument FONDAMENTAL !
+                    Il s'est rendu compte que si le rappel ne venait pas trop tard, la dégradation du
+                    souvenir était beaucoup plus lente ou, dit autrement, il met plus de temps à se
+                    détériorer ! C'est ce que l'on voit sur ce graphique :</p>
+                <div class="ratio ratio-16x9">
+                    <img class="img-fluid rounded rounded-3" data-aos="slide-right" src="pictures/graph_bonne_react.png">
+                </div> 
+                <p>Si tu te rappelles au bon moment, tu peux un peu ralentir la déterioration ! On voit
+                    sur le graphique du dessus la 1ère courbe (rouge) qui corresponde à la courbe de l'oubli
+                    d'un 1er apprentissage. Pour la 2ème courbe de l'oubli (courbe verte), la queue est plus plate : si le rappel 
+                    intervient au bon moment, on n'oublie beaucoup 
+                    moins vite que la 1ère fois ! Quel est le "bon moment" pour réviser ? Pile au moment
+                     où vous êtes sur le point de l'oublier !!!
+                </p>   
+                <p> Donc, l'astuce pour se souvenir...
+                c'est de presque oublier. De fait : pour mieux se souvenir de quelque chose, tu dois te le 
+                rappeler......pile quand tu es sur le point de l'oublier. Si tu te rappelles au bon moment,
+                 tu peux un peu ralentir la déterioration !  </p>
+               
+                <p> Maintenant, qu'arrive-t-il avec des rappels multiples ?
+                    Quelle est la meilleure manière d'espacer les rappels ? </p>
+                    <div class="row lead bg-white m-md-5 mx-2 shadow border border-3 border-primary">
+                        <div class="col-md-4 col-sm-6 my-auto">
+                            <p>Devrait-on faire des pauses uniformes ? 
+                                Des pauses de longueurs croissantes ? Des pauses de longueurs décroissantes ? 
+                                Ou rendre ça imprévisible, pour rester en alerte ?</p>
+                          
+                        </div>
+                        <div class="col-md-8 col-sm-6 px-5">
+                                <p class="text-center fw-bold text-primary mt-5">Rappels avec des pauses uniformes :</p>
+                            <div style="height:2px;width:auto; background-color:black;" class="my-4 mb-5 position-relative">
+                                <div class="position-absolute translate-middle bg-primary" style="width:10px; height:15px;
+                                  left:5%;"></div>
+                                  <div class="position-absolute translate-middle bg-primary" style="width:10px; height:15px;
+                                  left:25%;"></div>
+                                  <div class="position-absolute translate-middle bg-primary" style="width:10px; height:15px;
+                                  left:45%;"></div>
+                                  <div class="position-absolute translate-middle bg-primary" style="width:10px; height:15px;
+                                  left:65%;"></div>
+                                  <div class="position-absolute translate-middle bg-primary" style="width:10px; height:15px;
+                                  left:85%;"></div>
+                            </div>
+                            <p class="text-center fw-bold text-danger mt-5">Rappels avec des pauses croissantes :</p>
+                            <div style="height:2px;width:auto; background-color:black;" class="my-4 mb-5 position-relative">
+                                <div class="position-absolute translate-middle bg-danger" style="width:10px; height:15px;
+                                  left:5%;"></div>
+                                  <div class="position-absolute translate-middle bg-danger" style="width:10px; height:15px;
+                                  left:10%;"></div>
+                                  <div class="position-absolute translate-middle bg-danger" style="width:10px; height:15px;
+                                  left:20%;"></div>
+                                  <div class="position-absolute translate-middle bg-danger" style="width:10px; height:15px;
+                                  left:40%;"></div>
+                                  <div class="position-absolute translate-middle bg-danger" style="width:10px; height:15px;
+                                  left:85%;"></div>
+                            </div>
+
+                            <p class="text-center fw-bold text-success mt-5">Rappels avec des pauses décroissantes :</p>
+                            <div style="height:2px;width:auto; background-color:black;" class="my-4 mb-5 position-relative">
+                                <div class="position-absolute translate-middle bg-success" style="width:10px; height:15px;
+                                  left:5%;"></div>
+                                  <div class="position-absolute translate-middle bg-success" style="width:10px; height:15px;
+                                  left:50%;"></div>
+                                  <div class="position-absolute translate-middle bg-success" style="width:10px; height:15px;
+                                  left:70%;"></div>
+                                  <div class="position-absolute translate-middle bg-success" style="width:10px; height:15px;
+                                  left:80%;"></div>
+                                  <div class="position-absolute translate-middle bg-success" style="width:10px; height:15px;
+                                  left:85%;"></div>
+                            </div>
+
+                            <p class="text-center fw-bold text-secondary mt-5">Rappels avec des pauses aléatoires :</p>
+                            <div style="height:2px;width:auto; background-color:black;" class="my-4 mb-5 position-relative">
+                                <div class="position-absolute translate-middle bg-secondary" style="width:10px; height:15px;
+                                  left:5%;"></div>
+                                  <div class="position-absolute translate-middle bg-secondary" style="width:10px; height:15px;
+                                  left:30%;"></div>
+                                  <div class="position-absolute translate-middle bg-secondary" style="width:10px; height:15px;
+                                  left:40%;"></div>
+                                  <div class="position-absolute translate-middle bg-secondary" style="width:10px; height:15px;
+                                  left:60%;"></div>
+                                  <div class="position-absolute translate-middle bg-secondary mb-5" style="width:10px; height:15px;
+                                  left:85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mx-auto">
+                        <div class="col-md-11">
+                            <div class="carte m-2 ">
+                                <div class="devant rounded rounded-3 shadow border border-warning border-5">
+                                    <h4 class="text-center text-uppercase my-3 fw-bold">Question </h4>
+                                    <p class="lead mx-2">D'après vous, quel est le bon espacement pour que vos rappels soient les plus efficaces ?</p> 
+                                </div>
+                                <div class="derriere rounded rounded-3 shadow border border-warning border-5">
+                                    <p class="text-center my-2 fw-bold">Rappels avec des pauses croissantes :</p>
+                            <div style="height:2px;width:auto; background-color:black;" class="my-4 position-relative">
+                                <div class="position-absolute translate-middle bg-danger" style="width:10px; height:15px;
+                                  left:5%;"></div>
+                                  <div class="position-absolute translate-middle bg-danger" style="width:10px; height:15px;
+                                  left:10%;"></div>
+                                  <div class="position-absolute translate-middle bg-danger" style="width:10px; height:15px;
+                                  left:20%;"></div>
+                                  <div class="position-absolute translate-middle bg-danger" style="width:10px; height:15px;
+                                  left:40%;"></div>
+                                  <div class="position-absolute translate-middle bg-danger" style="width:10px; height:15px;
+                                  left:85%;"></div>
+                            </div>
+                            <p class="text-center my-2">On parle aussi de rappels expansés car les durées entre chaque rappel 
+                                sont de plus en plus grandes...
+                            </p>
+                                </div>
+                            </div>
+                    </div>
+                    <p>Cela s'explique assez facilement à l'aide de la courbe de l'oubli : si on fait un rappel actif
+                        au moment où l'on est en train d'oublier l'information (zone de l'oubli sur le graphique du 
+                        dessus), la courbe de l'oubli devient de plus en plus "plate". L'idéal étant qu'elle ne descende
+                         plus en dessous de cette zone de l'oubli. L'information est alors en mémoire à long-terme (plusieurs
+                         mois à plusieurs années) :
+                    </p>
+                    <div class="ratio ratio-16x9">
+                        <img class="img-fluid rounded rounded-3" data-aos="slide-left" src="pictures/graph_SRS.png">
+                    </div>
+                    <p>C'est ce que j'appelle être un "bon fainéant". Le mauvais fainéant ne fait rien car il est paresseux
+                         (il "fait néant" : c'est de là que vient le mot...). Le "bon fainéant" essaie d'optimiser ses efforts
+                        pour avoir le maximum de gains avec le minimum d'efforts (et nous sommes tous, à des degrés divers,
+                    un peu fainéants). Réviser à l'aide d'intervalles croissants (ou expansés) est le moyen le plus économique
+                avec le maximum de résultats ! Donc, pour être efficace, soyez (un bon) fainéant !</p>
+        </section>
+        
+        <section class="intro lead text-dark">
+            <h3 class="display-6 fw-bold mt-4 mb-3"> PENSE-BÊTE </h3>
+            <div class="ratio ratio-16x9">
+                <img class="img-fluid rounded rounded-3 shadow shadow-3" data-aos="slide-up" src="pictures/Pense_bete.gif">
+            </div> 
+        </section>
+
+        <section >		
+            <h3 class="mb-4"> CONTACT </h3>
+            <div class="row lead bg-white m-md-5 mx-5" style="border:2px solid black;
+            box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);">
+              <div class="col-md-3 col-sm-6 my-auto" data-aos="flip-down">
+                <img class="img-fluid" src="pictures/moi.jpeg" style="height: 205px;">
+              </div>
+              <div class="col-md-9 col-sm-6 my-auto">
+                <p class=" mt-4 text-justify" style="font-family: 'Cabin Sketch', cursive; font-size:20px; text-align : justify; color:rgb(21, 131, 233);"> Si vous avez des questions ou des commentaires, n'hésitez pas à m'envoyer un 
+                  email directement sur l'ENT du Collège.</p>
+                
+              </div>
+            </div>
+            </section>
+  
+         
+  
+          <!------------- PIED DE PAGE ------------->
+          <footer> 2021-2022 &copy; David Lapierre  </footer>  
+        
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-P2K2Y20FFD"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-P2K2Y20FFD');
+		</script>
+
+    </body>
+
+</html>
