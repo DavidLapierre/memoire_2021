@@ -28,7 +28,6 @@ header {
 header .container-mouvement {
     margin: 15px auto;
     position: relative;
-    background-image: url("../pictures/Logo4.JPG");
     background-size: 300px;
     width:370px;
     height: 220px;
@@ -38,7 +37,6 @@ header .container-mouvement {
 
 .chemin-svg {
     position: absolute;
-    background-image: url("../pictures/Logo4.JPG");
     background-size: 300px;
     width:370px;
     height: 220px;
