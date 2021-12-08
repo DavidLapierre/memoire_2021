@@ -1,7 +1,13 @@
+* {
+    margin:0px;
+    padding:0px;
+  }
+
 body {
     margin : 0px;
     font-family: sans-serif;
     background-color: #F4F7F6; 
+    
     /* background:transparent; */
 }
 
@@ -18,7 +24,7 @@ header {
     margin: 15px auto 0px auto;
     background-image: url(../pictures/Logo_oubli.png);
     background-size:cover;
-    width:490px;
+    width:390px;
     height:300px;
     position: relative;
 }
@@ -70,6 +76,9 @@ header {
 
 /* ANIMATION DU MOT : OUBLI ---- FIN ---- */
 
+/* ANIMATION DU MOT : OUBLI ---- DÉBUT ---- */
+
+/* ANIMATION DU MOT : OUBLI ---- FIN ---- */
 
 section {
     text-align: center;

@@ -645,7 +645,7 @@ section.introa p {
 
 .chemin-svg {
     position: absolute;
-    background-image: url("../pictures/Miniature_S06b.JPG");
+    background-image: url("../pictures/Miniature_S06b.jpeg");
     background-size: 300px;
     width:370px;
     height: 220px;
@@ -656,6 +656,8 @@ section.introa p {
 .objet {
     offset-path: path("M 0,100 C0,40 50,40 50,100 C50,40 100,40 100,100 C100,40 150,40 150,100 C150,40 200,40 200,100 C200,40 250,50 250,50"); /* PARABOLE */
     transform-origin: top center;
+    stroke: black;
+    fill:black;
 }
 
 .objet {
@@ -667,6 +669,7 @@ section.introa p {
     height: auto;
     filter:drop-shadow(2px 2px 2px rgba(0, 0, 0, .7));
     offset-rotate: 0deg;
+    fill:black;
 }
 
 .projet3:hover .objet {
