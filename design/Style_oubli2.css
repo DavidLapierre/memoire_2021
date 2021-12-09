@@ -47,11 +47,13 @@ header .container-mouvement {
 .objet {
     offset-path: path("M 0,100 C0,40 50,40 50,100 C50,40 100,40 100,100 C100,40 150,40 150,100 C150,40 200,40 200,100 C200,40 250,50 250,50"); /* PARABOLE */
     transform-origin: top center;
+    -webkit-transform-origin: top center;;
 }
 
 .objet {
     position:absolute;
     transform: scale(0.5);
+    -webkit-transform: scale(0.5);
     top:15px;
     left:100px;
     width:40px;
@@ -61,6 +63,7 @@ header .container-mouvement {
 
 .container-mouvement:hover .objet {
     animation : rebond 3s  forwards;
+    -webkit-animation : rebond 3s  forwards;
 }
 
 @keyframes rebond {
@@ -73,6 +76,19 @@ header .container-mouvement {
     60% {offset-distance: 60%; animation-timing-function:ease-in; offset-rotate:0deg;}
     70% {offset-distance: 70%; animation-timing-function:ease-out; offset-rotate:0deg;}
     80% {offset-distance: 80%; animation-timing-function:ease-in; offset-rotate:0deg;}
+    100% {offset-distance: 100%; offset-rotate:0deg;}
+}
+
+@-webkit-keyframes rebond {
+    0% {offset-distance: 0%;}
+    10% {offset-distance: 10%; -webkit-animation-timing-function:ease-out; }
+    20% {offset-distance: 20%; -webkit-animation-timing-function:ease-in; offset-rotate:0deg;}
+    30% {offset-distance: 30%; -webkit-animation-timing-function:ease-out; offset-rotate:0deg;}
+    40% {offset-distance: 40%; -webkit-animation-timing-function:ease-in; offset-rotate:0deg;}
+    50% {offset-distance: 50%; -webkit-animation-timing-function:ease-out; offset-rotate:0deg;}
+    60% {offset-distance: 60%; -webkit-animation-timing-function:ease-in; offset-rotate:0deg;}
+    70% {offset-distance: 70%; -webkit-animation-timing-function:ease-out; offset-rotate:0deg;}
+    80% {offset-distance: 80%; -webkit-animation-timing-function:ease-in; offset-rotate:0deg;}
     100% {offset-distance: 100%; offset-rotate:0deg;}
 }
 
@@ -90,6 +106,7 @@ header .container-mouvement {
 
 .container-mouvement:hover .idee {
     animation : grossissement 3s  forwards;
+    -webkit-animation : grossissement 3s  forwards;
 }
 
 @keyframes grossissement {
@@ -105,7 +122,18 @@ header .container-mouvement {
     100% {offset-distance: 100%; transform: scale(5.5); opacity:1;}
 }
 
-
+@-webkit-keyframes grossissement {
+    0% {offset-distance: 0%;}
+    10% {offset-distance: 10%;  }
+    20% {offset-distance: 20%; -webkit-transform: scale(2.0); opacity:1;}
+    30% {offset-distance: 30%; }
+    40% {offset-distance: 40%; -webkit-transform: scale(3.0); opacity:1;}
+    50% {offset-distance: 50%; }
+    60% {offset-distance: 60%; -webkit-transform: scale(4.0); opacity:1;}
+    70% {offset-distance: 70%; }
+    80% {offset-distance: 80%; -webkit-transform: scale(5.0); opacity:1;}
+    100% {offset-distance: 100%; -webkit-transform: scale(5.5); opacity:1;}
+}
 
 section {
     text-align: center;
