@@ -359,6 +359,15 @@ iframe {
     /* bottom:10px; */
     z-index : 3;
   }
+
+  .intitule3 {
+    filter:url(#round);
+    position:absolute;
+    left :60px;
+    top:-25px;
+    /* bottom:10px; */
+    z-index : 3;
+  }
   
   /* intitulé de la série */
   .intitule::before {
@@ -380,6 +389,22 @@ iframe {
     text-align: center;
     -webkit-clip-path: polygon(1% 81%, 0% 35%, 100% 0%, 100% 100%);
     clip-path: polygon(1% 81%, 0% 35%, 100% 0%, 100% 100%);
+    z-index : 3;
+  }
+ 
+
+  .intitule3::before {
+    content:'Sur iPhone';
+    color:white;
+    background-color: grey;
+    
+    background-image: url('../pictures/apple.png');
+    padding : 20px 20px;
+    width:40px;
+    text-align: center;
+    -webkit-clip-path: polygon(1% 81%, 0% 35%, 100% 0%, 100% 100%);
+    clip-path: polygon(1% 81%, 0% 35%, 100% 0%, 100% 100%);
+    
     z-index : 3;
   }
   
@@ -412,9 +437,13 @@ iframe {
     }
 
 
-    .orange::before{
-        border: solid orange;
-    }
+.orange::before{
+    border: solid orange;
+}
+
+.apple::before{
+    border: solid grey;
+}
   /* Mise en place de la bordure du Haut, du Bas et de Gauche */
   /* 
   -------------
@@ -519,6 +548,11 @@ iframe {
     border : 0px solid orange;
   }
 
+.apple:hover .title::before {
+background-color: grey;
+border : 0px solid grey;
+}
+
 .card1:nth-child(even):hover .title::before {
   clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%); /* CHEVRON GAUCHE*/
 }
@@ -560,6 +594,10 @@ iframe {
 .orange .title::before {
 border: 3px solid orange;
 }
+
+.apple .title::before {
+    border: 3px solid grey;
+    }
 
   
 /* texte à droite si la carte est PAIRE  */
