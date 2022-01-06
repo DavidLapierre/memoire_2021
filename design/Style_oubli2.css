@@ -3,6 +3,8 @@ body {
     font-family: sans-serif;
     background-color: #F4F7F6; 
     counter-reset: etape; /* COMPTEUR À 0 !!! */
+    display: grid; /* pour le BOUTON RETOUR */
+    grid-template-columns: auto 0px;
 }
 
 header {
@@ -15,7 +17,7 @@ header {
 }
 
 .illustration {
-    margin: 15px auto;
+    margin: 15px auto 0px auto;
     background-image: url(../pictures/Logo_Anki.png);
     background-size:cover;
     width:490px;
@@ -135,6 +137,28 @@ header .container-mouvement {
     100% {offset-distance: 100%; -webkit-transform: scale(5.5); opacity:1;}
 }
 
+/* BOUTON RETOUR EN HAUT */
+.top {
+  --offset: 100px;
+  
+  /* OUTER DISPLAY */
+  place-self:end; /* Pour placer le bouton à la fin de la page Web */
+  position: sticky;
+  bottom:20px;
+  margin-top: calc(100vh + var(--offset));
+
+  /* style visuel */
+  text-decoration: none;
+  padding: 10px;
+  font-size : 3rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #fff;
+  background: #000;
+  border-radius: 100px;
+  white-space:nowrap;  
+}
+
 section {
     text-align: center;
     padding-bottom: 20px;
@@ -149,6 +173,7 @@ h1 {
     margin-top : 0px;
     padding-top: 30px;
 }
+
 h2 {
     color : white;
     font-size: 1.5em;  /* ceci est un commentaire */
