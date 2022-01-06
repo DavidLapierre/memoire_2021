@@ -16,6 +16,7 @@
         <meta name="viewport" content="width=device-width" /> <!-- RESPONSIVE -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1/dist/chart.xkcd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </head>
     <!------------- CE QUI S'AFFICHE SUR LA PAGE ------------->
     <body>
@@ -23,8 +24,11 @@
         AOS.init({
             duration: 1200,
           })
+        
+       
+
         </script>
-        <!------------- EN-TÊTE DE PAGE ------------->
+       
         <header>
             
             <h1 data-aos="fade-down"> Séance 5 </h1> <!-- PRENOM et NOM -->
@@ -114,7 +118,10 @@
                 </p>
 
         </section>
-
+        <!-- <div style="width:400px; height:400px">
+            <canvas id="myChart" width="200" height="200">Canevas</canvas>
+            <script src="chart_bar.js"></script>
+        </div> -->
        
 
         <section class="intro lead text-dark">
@@ -151,6 +158,7 @@
                     </li>
                 </ol>
             </p>
+            
             <div class="row lead bg-white m-md-5 mx-2 shadow border border-3 border-primary">
                 <div class="row">
                     <p class="fw-bold fs-4 text-primary mt-3 " > La récupération en mémoire (test) est plus efficace que l’étude !</p>
@@ -183,28 +191,27 @@
                     
                     <div class="row">
                     <div class="col-md-6 col-sm-6 my-auto">
-                        <figure>
-                             <img class="img-fluid" src="pictures/etude_vs_recuperation.png">
-                             <figcaption class="fs-6 fst-italic">L'entraînement à la récupération en mémoire (par exemple, à l'aide de tests) est plus efficace
-                                 que l'étude.
-                             </figcaption>
-                        </figure>
-                     
+                        <div >
+                            <canvas id="myChart" width="400" height="300">Canevas</canvas>
+                            <script src="chart_bar.js"></script>
+                        </div>                     
                     </div>
 
-                    <p class="fs-6 col-md-6 col-sm-6 my-auto mb-4" style='text-align: justify; line-height:20px;'> La figure avec les barres présente 
-                        les résultats d’une étude5 ayant comparé l’efficacité de 
+                    <p class="fs-6 col-md-6 col-sm-6 my-auto mb-4 fst-italic" style='text-align: justify; line-height:20px;'> La figure avec les barres présente 
+                        les résultats d’une étude ayant comparé l’efficacité de l'entraînement
                          à la récupération en mémoire par rapport à l’étude. Les participants à cette recherche ont
-                          été répartis en trois groupes ayant chacun huit périodes d’apprentissage : le premier groupe 
-                          avait huit périodes pour étudier, le deuxième groupe avait six périodes d’étude, car deux 
+                          été répartis en trois groupes ayant chacun 8 périodes d’apprentissage : le 1<sup>er</sup> groupe 
+                          avait 8 périodes d'étude, le 2<sup>ème</sup> groupe avait 6 périodes d’étude, car 2 
                           périodes étaient des périodes de test où la récupération en mémoire était requise pour 
-                          répondre aux questions et le troisième groupe avait autant de tests que de périodes d’étude
-                           (quatre périodes d’étude et quatre tests).
+                          répondre aux questions et le 3<sup>ème</sup> groupe avait autant de tests que de périodes d’étude
+                           (4 périodes d’étude et 4 tests).<br>
                         Les résultats de cette recherche sont clairs : le fait d’avoir plus de tests et donc plus 
                         d’entraînement à la récupération en mémoire augmente significativement la réussite. 
                         Les personnes ayant eu seulement des périodes d’étude ont en moyenne un taux de rappel de 
-                        seulement 17 %. Ceux qui ont eu deux tests (et six périodes d’étude) ont mieux réussi
-                         avec un résultat moyen de 25 %. Et finalement, ceux qui ont bénéficié du plus grand nombre de tests (quatre tests et quatre périodes d’étude) sont ceux qui ont le mieux réussi avec un taux moyen de rappel de 39 %. »
+                        seulement 17 %. Ceux qui ont eu 2 tests (et 6 périodes d’étude) ont mieux réussi
+                         avec un résultat moyen de 25 %. Et finalement, ceux qui ont bénéficié du plus grand
+                          nombre de tests (4 tests et 4 périodes d’étude) sont ceux qui ont le mieux réussi 
+                          avec un taux moyen de rappel de 39 %. »
                         
                         </p>
                     
