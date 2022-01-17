@@ -193,7 +193,75 @@
                     <div class="col-md-6 col-sm-6 my-auto">
                         <div >
                             <canvas id="myChart" width="400" height="300">Canevas</canvas>
-                            <script src="chart_bar.js"></script>
+                            <script>
+                                // setup data block
+                                  const data = {
+                                        labels: ['Groupe 1', 'Groupe 2', 'Groupe 3'],
+                                        datasets: [{
+                                            label: '% de rappel',
+                                            data: [17, 25, 39],
+                                            backgroundColor: [
+                                              'rgba(255, 99, 132, 0.2)',
+                                              'rgba(75, 192, 192, 0.2)',
+                                              'rgba(54, 162, 235, 0.2)'
+                                               
+                                            ],
+                                            borderColor: [
+                                              'rgba(255, 99, 132, 1)',
+                                              'rgba(75, 192, 192, 1)',
+                                              'rgba(54, 162, 235, 1)'
+                                            ],
+                                            borderWidth: 2
+                                        }] 
+                                  };
+                          
+                                // configuration block
+                                  const config = {
+                                    type: 'bar',
+                                    data: data,
+                                    options: {
+                                        plugins: {
+                                          tooltip: {
+                                              callbacks: {
+                                                  label: function(context){
+                                                      if (context.raw == 17) {
+                                                          let affichage = `8 périodes d'études`;
+                                                          return affichage
+                                                      };
+                                                      if (context.raw == 25) {
+                                                          let affichage = `6 périodes d'études et 2 périodes de tests`;
+                                                          return affichage
+                                                      };
+                                                      if (context.raw == 39) {
+                                                          let affichage = `4 périodes d'études et 4 de tests`;
+                                                          return affichage
+                                                      }
+                                                  },
+                                                  afterLabel: function(context){
+                                                      if (context.raw == 17 || 25 || 39) {
+                                                          let affichage =  context.raw + `% de rappel`;
+                                                          return affichage
+                                                      }
+                                                  }
+                                              }
+                                          }
+                                        },
+                                      scales: {
+                                          y: {
+                                              beginAtZero: true
+                                          }
+                                      }
+                                    }
+                          
+                                  }
+                                    
+                                // init render block
+                                  const myChart = new Chart(
+                                      document.getElementById('myChart'),
+                                      config,
+                                  );      
+                              </script>
+                            
                         </div>                     
                     </div>
 
