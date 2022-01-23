@@ -400,8 +400,8 @@ section.introa p {
     width: 390px;
     height: 250px;
     background-size: cover;
-    margin : 0 auto;
-    position: relative;
+    /* margin : 0 auto; */
+    /* position: relative; */
 }
 
 .illustration_S02 .liste {
@@ -415,23 +415,23 @@ section.introa p {
 .illustration_S02 .liste1 {
     width:30px;
     height:auto;
-    top: 16%;
-    left:52%;
+    top: 10%;
+    left:50%;
 }
 
 .illustration_S02 .liste2 {
-    top: 19%;
-    left:60%;
+    top: 12%;
+    left:58%;
 }
 
 .illustration_S02 .liste3 {
-    top: 23%;
-    left:69%;
+    top: 14%;
+    left:67%;
 }
 
 .illustration_S02 .liste4 {
-    top: 26%;
-    left:77%;
+    top: 16%;
+    left:75%;
 }
 
 .projet2:hover .liste1 {transition-delay: 000ms;opacity: 1;}
@@ -575,17 +575,17 @@ section.introa p {
     width: 390px;
     height: 250px;
     background-size: cover;
-    position: relative;
+    /* position: relative; */
 }
 
 /* ANIMATION SÉANCE 5 */
 .illustration_S05 {
-    margin: 15px auto;
+    /* margin: 15px auto; */
     background-image: url(../pictures/Miniature_S05.png);
     background-size:cover;
     width:390px;
     height:250px;
-    position: relative;
+    /* position: relative; */
 }
 
 .illustration_S05 ul {
@@ -637,24 +637,32 @@ section.introa p {
 }
 
 /* ANIMATION ANKI ----- DÉBUT ---- */
+.illustration_S06 {
+    /* margin: 15px auto; */
+    background-image: url(../pictures/Miniature_S04.jpeg);
+    background-size:cover;
+    width:390px;
+    height:250px;
+}
+
 .container-mouvement {
     position: relative;
     width:370px;
     height: 250px;
+    
 }
 
 .chemin-svg {
-    position: absolute;
-    background-image: url("../pictures/Miniature_S06b.jpeg");
-    background-size: 300px;
+    /* position: absolute; */
+    background-image: url("../pictures/Miniature_S04.jpeg");
+    background-size: cover;
     width:370px;
-    height: 220px;
-    top:00%;
-    left:0;
+    height: 250px;
 }
 
 .objet {
-    offset-path: path("M 0,100 C0,40 50,40 50,100 C50,40 100,40 100,100 C100,40 150,40 150,100 C150,40 200,40 200,100 C200,40 250,50 250,50"); /* PARABOLE */
+    offset-path: path("M 0,100 C0,40 50,40 50,100 C50,40 100,40 100,100 C100,40 150,40 150,100 C150,40 200,40 200,100 C200,40 250,50 250,50"); 
+    /* PARABOLE */
     transform-origin: top center;
     stroke: black;
     fill:black;
@@ -662,7 +670,7 @@ section.introa p {
 
 .objet {
     position:absolute;
-    transform: scale(0.5);
+    transform: scale(0.05);
     top:-10px;
     left:100px;
     width:40px;
@@ -686,7 +694,7 @@ section.introa p {
     60% {offset-distance: 60%; animation-timing-function:ease-in; offset-rotate:0deg;}
     70% {offset-distance: 70%; animation-timing-function:ease-out; offset-rotate:0deg;}
     80% {offset-distance: 80%; animation-timing-function:ease-in; offset-rotate:0deg;}
-    100% {offset-distance: 100%; offset-rotate:0deg;}
+    100% {offset-distance: 95%; offset-rotate:0deg;}
 }
 
 .idee {
@@ -696,6 +704,7 @@ section.introa p {
     top:120px;
     left:90px;
     opacity:1;
+    transform: scale(0.05);
     /* filter:drop-shadow(2px 2px 2px rgba(0, 0, 0, .7)); */
 }
 
@@ -705,18 +714,28 @@ section.introa p {
 
 @keyframes grossissement {
     0% {offset-distance: 0%;}
-    10% {offset-distance: 10%;  }
-    20% {offset-distance: 20%; transform: scale(3.0); opacity:1;}
-    30% {offset-distance: 30%; }
-    40% {offset-distance: 40%; transform: scale(5.0); opacity:1;}
-    50% {offset-distance: 50%; }
-    60% {offset-distance: 60%; transform: scale(7.0); opacity:1;}
-    70% {offset-distance: 70%; }
-    80% {offset-distance: 80%; transform: scale(8.0); opacity:1;}
-    100% {offset-distance: 100%; transform: scale(8.5); opacity:1;}
+    10% {offset-distance: 0%;  }
+    20% {offset-distance: 0%; transform: scale(0.1); opacity:1;}
+    30% {offset-distance: 0%; }
+    40% {offset-distance: 0%; transform: scale(0.2); opacity:1;}
+    50% {offset-distance: 0%; }
+    60% {offset-distance: 0%; transform: scale(0.35); opacity:1;}
+    70% {offset-distance: 0%; }
+    80% {offset-distance: 0%; transform: scale(0.45); opacity:1;}
+    100% {offset-distance: 100%; transform: scale(0.6); opacity:1;}
 }
 
 /* ANIMATION ANKI ----- FIN ---- */
+
+.illustration_S07 {
+    background-image: url("../pictures/Miniature_S07.jpg");
+    background-size: cover;
+    width:390px;
+    height:270px;
+    /* position: relative; */
+    /* margin-bottom:40px; */
+}
+
 
 /* ANIMATION DU COEUR */
 .illustration_coherence {

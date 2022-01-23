@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
+
+body {
+    margin : 0px;
+    font-family: sans-serif;
+    /* font-family: 'Short Stack', cursive; */
+    background-color: #F4F7F6; 
+    display: grid; /* pour le BOUTON RETOUR */
+    grid-template-columns: auto 0px;
+}
+
+header {
+    text-align: center;
+    background-color: black;
+    text-decoration-color: red;
+    width : 100%;
+    margin : 0px;
+    margin-bottom: 0px;
+}
+
+.illustration {
+    margin: 15px auto 0px auto;
+    background-image: url(../pictures/seance_MM.jpg);
+    background-size:cover;
+    width:490px;
+    height:340px;
+    position: relative;
+    padding-bottom:20px;
+}
+
+header .figure {
+    margin: 0px 0px;
+}
+
+.figure img {
+    margin: 0px 0px;
+}
+
+
+section {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+h1 {
+    color : #ffffff;
+    font-size: 2.5em;  /* ceci est un commentaire */
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    opacity : 1.0;
+    margin-top : 0px;
+    padding-top: 30px;
+}
+h2 {
+    color : white;
+    font-size: 1.5em;  /* ceci est un commentaire */
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    width : 90%;
+    margin: auto;
+}
+
+h3::before {
+    content:  "«";
+    color : grey;
+    /* width:90%; */
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 1.5em;
+    /* clear: both; */
+    text-align: center;
+}
+
+h3::after {
+    content:  "»";
+    color : grey;
+}
+
+/* BARRE DE NAVIGATION */
+nav li {
+    color : black;
+    list-style-type: none;
+    display: inline;
+    margin: 10px;
+}
+
+nav {
+    color : black;
+    background-color: white;
+    box-shadow: 0px 3px 1px -1px rgba(0,0,0,0.5);
+    text-align: center;
+    font-size: 1.1em;
+    clear: both;
+    margin-top: 0px;
+	padding : 15px;
+    font-family: sans-serif;
+}
+
+nav a {
+    color : black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    position:relative;
+}
+
+nav ul {
+    padding: 0px 0px;
+    margin: 0px auto;
+}
+
+/* ANIMATION menu : trait bleu */
+nav ul li a::before {
+    content: '';
+    width:0%;
+    height:5px;
+    background-color: lightskyblue;
+    position: absolute;
+    top:110%;
+    transition:all 0.4s ease-out;
+}
+
+nav ul li a:hover::before {
+    content: '';
+    width:50%;
+    transform: translateX(100%);
+    box-shadow: 2px 2px 2px grey;
+}
+
+
+/* ANIMATION menu : trait violet */
+nav ul li a::after {
+    content: '';
+    width:0%;
+    height:5px;
+    background-color:#f0f;
+    position: absolute;
+    top:110%;
+    right:0;
+    transition:all 0.4s ease-out;
+}
+
+nav ul li a:hover::after {
+    content: '';
+    width:50%;
+    transform: translateX(-100%);
+    box-shadow: 2px 2px 2px grey;
+}
+
+/* Mettre la police en gras au survol d'un élément du menu : */
+nav li:hover {
+    /* transition : 0.3s;
+    font-weight: bold;
+    text-transform: uppercase; */
+    /* font-size: 1.2em; */
+    text-shadow: 2px 2px 2px grey;
+    display: inline;
+}
+
+/* BOUTON RETOUR EN HAUT */
+.top {
+    --offset: 100px;
+    
+    /* OUTER DISPLAY */
+    place-self:end; /* Pour placer le bouton à la fin de la page Web */
+    position: sticky;
+    bottom:20px;
+    margin-top: calc(100vh + var(--offset));
+    margin-right: 0.2em;
+  
+    /* style visuel */
+    text-decoration: none;
+    padding: 10px;
+    font-size : 3rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #fff;
+    background: #000;
+    border-radius: 100px;
+    white-space:nowrap;  
+  }
+
+p {
+    margin-bottom: 6; 
+}
+/* Pour  faire un retrait de 1ère ligne */
+/* dans les introductions des séances : */
+p + p {
+    text-indent: 1.5em;
+    margin-top: 0;
+}
+
+footer {
+    background-color: #1d1d1d;
+    color : white;
+    text-align: center;
+	 padding : 15px;
+}
+
+iframe {
+    justify-content : center;
+    width : 300px; 
+	display : block;
+	margin : auto;
+	border-radius : 5px;
+	box-shadow : 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+dt {
+    font-weight: bold;
+}
+
+/* DEFINITION EN INTRODUCTION */
+dl,
+dd {
+    font-size: .9rem;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+dl {
+    margin-left: 0.5em;
+}
+dd {
+    margin: 0 1em;
+    padding-left: 1em;;
+}
+
+dt {
+    margin-left: 1em;
+}
+
+/* COURS */
+[style*="--aspect-ratio"] > :first-child {
+    width: 100%;
+  }
+  [style*="--aspect-ratio"] > img {  
+    height: auto;
+  } 
+  @supports (--custom:property) {
+    [style*="--aspect-ratio"] {
+      position: relative;
+    }
+    [style*="--aspect-ratio"]::before {
+      content: "";
+      display: block;
+      padding-bottom: calc(100% / (var(--aspect-ratio)));
+    }  
+    [style*="--aspect-ratio"] > :first-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }  
+  }
+  
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* ratio 16/9 */
+    height: 0; overflow: hidden;
+    clear: both;
+}
+
+
+/* ID */
+#contact {
+	width : 80%;
+    margin : auto;
+    display: block;
+    border : 2px black solid;
+    border-radius: 15px;
+    padding : 30px;
+    margin-bottom : 50px;
+    box-shadow: 5px 5px 5px grey; 
+    background-image: radial-gradient(circle at 61.19% 8.26%, #ffffff 0, #becae5 50%, #5e7bad 100%);
+    font-family: 'Short Stack', cursive;
+}
+
+div .essai {
+        border: double black 20em;
+        border-image-source : url("../pictures/conteneur_contact.png");
+        border-image-slice: 240 440 250 380;
+        border-image-width: 20px 20px 20px 20px;
+        border-image-outset: 0px 0px 0px 0px;
+        border-image-repeat: stretch stretch; 
+        border-image-source : url("../pictures/conteneur_contact.png");
+}
+
+/* CLASSES */
+.separator {
+	width : 100px;
+	height : 2px;
+    margin : 15px auto;
+	display : block;
+	background-color : #999999;
+	}
+
+
+.intro, .introa {
+	font-size: 1.2em; 
+    text-align : justify;
+    line-height: 1.5em;
+    /* word-spacing: 0.3em; */
+	width : 80%;
+	margin : auto;
+}
+
+.titre {
+    text-transform : uppercase;
+    font-weight: bold;
+	text-align : center;
+}
+
+
+.video {
+    width:90%;
+    max-width:360px;
+}
+
+
+
+
+
+/* MEDIA QUERIES */
+@media all and (max-width : 1000px){
+    
+    header h2 {width : 90%;}
+    header h2 {width : 90%;}
+    h3 {width : 95%; font-size : 1.2em;}
+    .contener {width : 85%; margin : auto;}
+    .intro {width : 90%; margin: 10px auto;}
+    .introa {width : 90%; margin: 10px auto;}
+    .bienvenue {width : 90%}
+    .picture-project h3 {width: 100%; padding : 0% 15%; font-size: 1.2em; text-align: center; }
+}
